@@ -50,3 +50,7 @@ buck-out/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
+
+
+# Additional ignore files
+android/app/src/main/res/raw/choti_gaya.mp3

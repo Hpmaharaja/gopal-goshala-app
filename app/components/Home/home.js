@@ -3,10 +3,15 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  ScrollView,
+  Button,
+  Linking
 } from 'react-native';
 
+
 export default class goshala1 extends Component {
+	
   render() {
     return (
       <View style={styles.container}>
@@ -14,16 +19,30 @@ export default class goshala1 extends Component {
       		<Text style={styles.headerText}>Gopal Goshala</Text>
       	</View>
       	<View style={styles.logoContainer}>
-      		<Image style={styles.logo} source={require('../../images/cowlogo.jpg')} />
-      		<Text style={styles.title}>The Cow is the most important living being for human beings. 
-      		The body can be maintained by any kind of foodstuff, but Cow’s milk is particularly essential 
-      		for developing the finer tissues of the human brain so that one can understand the intricacies of transcendental knowledge. 
-      		Civilized men live on foodstuffs comprising fruits, vegetables, grains, sugar, and milk.
-      		The Bull helps on the farm to plough the land in the agricultural process of producing grains etc., 
-      		and thus in one sense the Bull is the father of humankind, whereas the Cow is the Mother, for she supplies milk to humans. 
-      		The kind hearted humans will appreciate and give all protection to the Bulls and Cows.</Text>
-      		<Text style={styles.action}>Help your mother, who provides you with milk and related
-      		products (cheese, ice cream, kurd etc..) daily, the cow</Text>
+      			<Image style={styles.logo} source={require('../../images/cowlogo.jpg')} />
+
+      		<ScrollView>
+	      		<Text style={styles.title}>The Cow is the most important living being for human beings. 
+	      		The body can be maintained by any kind of foodstuff, but Cow’s milk is particularly essential 
+	      		for developing the finer tissues of the human brain so that one can understand the intricacies of transcendental knowledge. 
+	      		Civilized men live on foodstuffs comprising fruits, vegetables, grains, sugar, and milk.
+	      		The Bull helps on the farm to plough the land in the agricultural process of producing grains etc., 
+	      		and thus in one sense the Bull is the father of humankind, whereas the Cow is the Mother, for she supplies milk to humans. 
+	      		The kind hearted humans will appreciate and give all protection to the Bulls and Cows.</Text>
+
+	      		<Text style={styles.action}>Help your mother, who provides you with milk and related
+	      		products (cheese, ice cream, kurd etc..) daily, the cow</Text>
+	      	</ScrollView>
+	      	<View style={styles.donateButton}>
+	      		<Button
+				  onPress={(event) => {
+		            Linking.openURL('http://gopalgoshala.org');
+				  }}
+				  title="Donate"
+				  color="#3498db"
+				  accessibilityLabel="Donate Today"
+				/>
+			</View>
       	</View>
       	<View>
       		<Text style={styles.subtitle}>Powered by Gopal Goshala</Text>
@@ -36,8 +55,8 @@ export default class goshala1 extends Component {
 const styles = StyleSheet.create({
 	header: {
 		alignSelf: 'stretch',
-		height: 20,
-		backgroundColor: '#8e44ad',
+		height: 30,
+		backgroundColor: '#2c3e50',
 		justifyContent: 'center'
 	},
 	headerText: {
@@ -53,10 +72,10 @@ const styles = StyleSheet.create({
 	},
 	logoContainer: {
 		alignItems: 'center',
+		justifyContent: 'center',
 		flex: 1
 	},
 	logo: {
-		alignSelf: 'stretch',
 		height: 300
 	},
 	title: {
@@ -73,6 +92,10 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		textAlign: 'center',
 		opacity: 0.9
+	},
+	donateButton: {
+		marginTop: 10,
+		width: 250
 	},
 	subtitle: {
 		color: 'white',
