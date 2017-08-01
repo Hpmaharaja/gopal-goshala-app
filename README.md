@@ -1,5 +1,9 @@
 # Gopal Goshala React-Native App Project Description
+
+To try the android app :=> [Gopal Goshala](https://play.google.com/store/apps/details?id=com.goshala1 "Gopala Goshala")
+
 Gopal Goshala is a simple React-Native application for a non-profit cause devoted to helping cows in India. Unfortuntely, the situation today for the cows is terrible as they are not treated well. Cows often end up eating plastic, are left thirsty in the hot weather of the sub-continent, and eventually live painful lives. Gopal Goshala helps this cause by sheltering, feeding, and tending cows who need it the most. This application dives into what Gopal Goshala does, where they provide assistance, and how you can make a difference too! 
+
 
 ## The Stack and Dependencies
 ### React-Native
