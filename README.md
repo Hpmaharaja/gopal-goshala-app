@@ -1,14 +1,7 @@
-<p align="center">
-<img src="https://raw.githubusercontent.com/mmazzarolo/tap-the-number/master/extra/tap_the_number_title.png" width="420"></img><br />  <br /> 
-<a href="https://itunes.apple.com/us/app/tap-the-number/id1206517840?l=it&ls=1&mt=8"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/800px-Download_on_the_App_Store_Badge.svg.png" width="120"></img></a> 
-</p>
-&nbsp;  
-&nbsp;  
-
 Gopal Goshala is a simple React-Native application for a non-profit cause devoted to helping cows in India. Unfortuntely, the situation today for the cows is terrible as they are not treated well. Cows often end up eating plastic, are left thirsty in the hot weather of the sub-continent, and eventually live painful lives. Gopal Goshala helps this cause by sheltering, feeding, and tending cows who need it the most. This application dives into what Gopal Goshala does, where they provide assistance, and how you can make a difference too! 
 
 ## The stack and the dependencies
-#### React-Native
+### React-Native
 
 
 ## Project structure 

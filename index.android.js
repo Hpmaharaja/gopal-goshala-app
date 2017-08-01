@@ -18,10 +18,7 @@ import { Tabs } from './app/config/router';
 // // Import the react-native-sound module
 import Sound from 'react-native-sound';
 
-
-export default class goshala1 extends Component {
-	componentWillMount() {
-		var whoosh = new Sound('choti_gaya.mp3', Sound.MAIN_BUNDLE, (error) => {
+var whoosh = new Sound('choti_gaya.mp3', Sound.MAIN_BUNDLE, (error) => {
 	  if (error) {
 		    console.log('failed to load the sound', error);
 		    return;
@@ -29,6 +26,9 @@ export default class goshala1 extends Component {
 		  // loaded successfully
 		  console.log('duration in seconds: ' + whoosh.getDuration() + 'number of channels: ' + whoosh.getNumberOfChannels());
 	});
+
+export default class goshala1 extends Component {
+	componentWillMount() {
 	}
 
 	componentDidMount() {
