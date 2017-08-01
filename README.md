@@ -1,53 +1,45 @@
+# Gopal Goshala React-Native App Project Description
 Gopal Goshala is a simple React-Native application for a non-profit cause devoted to helping cows in India. Unfortuntely, the situation today for the cows is terrible as they are not treated well. Cows often end up eating plastic, are left thirsty in the hot weather of the sub-continent, and eventually live painful lives. Gopal Goshala helps this cause by sheltering, feeding, and tending cows who need it the most. This application dives into what Gopal Goshala does, where they provide assistance, and how you can make a difference too! 
 
-## The stack and the dependencies
+## The Stack and Dependencies
 ### React-Native
+```
+"dependencies": {
+    "native-base": "^2.3.1",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.46.4",
+    "react-native-sound": "^0.10.3",
+    "react-navigation": "^1.0.0-beta.11"
+  }
 
+```
 
 ## Project structure 
 The structure of the application and all its files are the following:
 ```javascript
 src
- ├── index.js // The app entry point
+ ├── index.android.js // The app component entry box
  │
- ├── assets // audio & fonts that must be linked in the app
+ ├── android // android building files
  │
- ├── components
- │   ├── CustomText.js // A wrapper on the text used in the entire app (responsive + custom font)
- │   ├── Tile.js // The tile component used in the home screen and in the playground
- │   └── TouchableView.js // A cross-platform helper view with a touchable behavior
+ ├── ios // iOS building files
  │
- ├── config
- │   ├── colors.js // Colors (the available tiles colors, etc...)
- │   ├── env.js // Platform specific variables (IS_ENV_DEVELOPMENT, IS_ANDROID, etc...)
- │   ├── metrics.js // App metrics (DEVICE_WIDTH, TILE_SIZE, etc...)
- │   └── timings.js // Timing specific variables (TIME_LIMIT_MS, etc...)
- │
- ├── containers
- │   ├── App // The root app screen, routing is handled here
- │   ├── Endgame // The post-game screen (with the score and restart button)
- │   ├── Home // The home screen (with the start game button)
- │   └── Playground // The screen where the game runs
- │       ├── Board // The board game, renders the tiles
- │       ├── BoardTile // A Tile with Board-specific behaviors
- │       └── TimeBar // The top-bar with that shows the remaining time
- │
- ├── images // The app images
- │
- ├── services
- │   └── audio.js // Simple wrapper over react-native-sound 
- │
- ├── stores // MobX stores
- │   ├── game.js // All the app logic is handled here (Board setup, scoring, etc...)
- │   └── router.js // A super simple router 
- │
- ├── types // Flowtype types
- │
- └── utils
-     ├── boardUtils.js // Board setup utils (getRandomTilePosition, getRandomNumber, etc...)
-     ├── colorUtils.js // Color utils (getDifferentLuminance, etc...)
-     └── timeUtils.js // Simple timing helpers (mostly wrappers over setTimeout)
+ └── app
+     ├── components // React-native components
+     │   ├── Home   // Home Component Repo
+     │   │   └── home.js // home component
+     │   ├── About  // About Component Repo
+     │   │   └── about.js // about component
+     │   ├── Donate // Donate Component Repo
+     │   │   └── donate.js // donate component
+     │   └── Landing.js // Sample Testing Landing Component
+     ├── config // Configurations (router for now)
+     │   └── router.js // Router Definitions
+     └── images // Visual media for app
+         ├── about.jpg // about screen image
+         ├── cowlogo.jpg // logo image
+         └── donate.jpg // donate screen image
+ 
 ```
-The project structure I used here may seem over-engineered at first, but this setup paid off almost 
-instantly (continue below).
+This project structure is based on screen-based organization. 
 
